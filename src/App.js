@@ -1,0 +1,21 @@
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Sidebar from "./components/navbar";
+import { Route } from "react-router-dom";
+import AddContacts from "./screens/addContacts";
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <div className="container">
+          <Sidebar />
+          <Route path="/add" component={AddContacts} exact />
+        </div>
+      </div>
+    );
+  }
+}
+
+export default App;
